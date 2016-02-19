@@ -1,5 +1,0 @@
-version: "Apple Swift version 3.0-dev (LLVM a7663bb722, Clang 4ca3c7fa28, Swift 1c2f40e246)"
-options: "36904646d81ff47d7e7ebef9a2936a36"
-build_time: [509171804, 9535000]
-inputs:
-  "/Users/eirny/Work/Sample-Regex/Sources/main.swift": [509171799, 0]
