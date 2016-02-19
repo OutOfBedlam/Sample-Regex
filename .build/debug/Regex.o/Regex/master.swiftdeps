@@ -1,0 +1,10 @@
+version: "Apple Swift version 3.0-dev (LLVM a7663bb722, Clang 4ca3c7fa28, Swift 1c2f40e246)"
+options: "d2140a588d50ca0174dc8953596e5e2f"
+build_time: [509119129, 980103000]
+inputs:
+  "/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/Foundation+Ranges.swift": [509119123, 0]
+  "/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/MatchResult.swift": [509119123, 0]
+  "/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/Options.swift": [509119123, 0]
+  "/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/Regex.swift": [509119129, 0]
+  "/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/String+ReplaceMatching.swift": [509119129, 0]
+  "/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/ThreadLocal.swift": [509119123, 0]

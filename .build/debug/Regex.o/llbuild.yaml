@@ -1,0 +1,29 @@
+client:
+  name: swift-build
+
+tools: {}
+
+targets:
+  "": [<Regex>]
+  Regex: [<Regex>]
+
+commands:
+  <Regex-swiftc>:
+    tool: swift-compiler
+    executable: "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-02-08-a.xctoolchain/usr/bin/swiftc"
+    inputs: ["/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/Foundation+Ranges.swift","/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/MatchResult.swift","/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/Options.swift","/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/Regex.swift","/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/String+ReplaceMatching.swift","/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/ThreadLocal.swift"]
+    outputs: ["<Regex-swiftc>","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.swiftmodule","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/Foundation+Ranges.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/MatchResult.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/Options.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/Regex.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/String+ReplaceMatching.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/ThreadLocal.swift.o"]
+    module-name: "Regex"
+    module-output-path: "/Users/eirny/Work/Sample-Regex/.build/debug/Regex.swiftmodule"
+    is-library: true
+    sources: ["/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/Foundation+Ranges.swift","/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/MatchResult.swift","/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/Options.swift","/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/Regex.swift","/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/String+ReplaceMatching.swift","/Users/eirny/Work/Sample-Regex/Packages/Regex-0.3.1/Source/ThreadLocal.swift"]
+    objects: ["/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/Foundation+Ranges.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/MatchResult.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/Options.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/Regex.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/String+ReplaceMatching.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/ThreadLocal.swift.o"]
+    import-paths: ["/Users/eirny/Work/Sample-Regex/.build/debug"]
+    temps-path: "/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Regex"
+    other-args: ["-j8","-Onone","-g","-target","x86_64-apple-macosx10.10","-enable-testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","-I","/usr/local/include","-D","SWIFT_PACKAGE"]
+  <Regex>:
+    tool: shell
+    inputs: ["<Regex-swiftc>","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/Foundation+Ranges.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/MatchResult.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/Options.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/Regex.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/String+ReplaceMatching.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/ThreadLocal.swift.o"]
+    outputs: ["<Regex>","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.a"]
+    args: ["/bin/sh","-c","rm -f '/Users/eirny/Work/Sample-Regex/.build/debug/Regex.a'; ar cr '/Users/eirny/Work/Sample-Regex/.build/debug/Regex.a' '/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/Foundation+Ranges.swift.o' '/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/MatchResult.swift.o' '/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/Options.swift.o' '/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/Regex.swift.o' '/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/String+ReplaceMatching.swift.o' '/Users/eirny/Work/Sample-Regex/.build/debug/Regex.o/Source/ThreadLocal.swift.o'"]
+    description: "Linking Library:  .build/debug/Regex.a"

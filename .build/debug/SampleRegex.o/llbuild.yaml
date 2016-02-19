@@ -1,0 +1,29 @@
+client:
+  name: swift-build
+
+tools: {}
+
+targets:
+  "": [<SampleRegex>]
+  SampleRegex: [<SampleRegex>]
+
+commands:
+  <SampleRegex-swiftc>:
+    tool: swift-compiler
+    executable: "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-02-08-a.xctoolchain/usr/bin/swiftc"
+    inputs: ["/Users/eirny/Work/Sample-Regex/Sources/main.swift"]
+    outputs: ["<SampleRegex-swiftc>","/Users/eirny/Work/Sample-Regex/.build/debug/SampleRegex.swiftmodule","/Users/eirny/Work/Sample-Regex/.build/debug/SampleRegex.o/Sources/main.swift.o"]
+    module-name: "SampleRegex"
+    module-output-path: "/Users/eirny/Work/Sample-Regex/.build/debug/SampleRegex.swiftmodule"
+    is-library: false
+    sources: ["/Users/eirny/Work/Sample-Regex/Sources/main.swift"]
+    objects: ["/Users/eirny/Work/Sample-Regex/.build/debug/SampleRegex.o/Sources/main.swift.o"]
+    import-paths: ["/Users/eirny/Work/Sample-Regex/.build/debug"]
+    temps-path: "/Users/eirny/Work/Sample-Regex/.build/debug/SampleRegex.o/SampleRegex"
+    other-args: ["-j8","-Onone","-g","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","-I","/usr/local/include","-D","SWIFT_PACKAGE"]
+  <SampleRegex>:
+    tool: shell
+    inputs: ["<SampleRegex-swiftc>","/Users/eirny/Work/Sample-Regex/.build/debug/SampleRegex.o/Sources/main.swift.o","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.a"]
+    outputs: ["<SampleRegex>","/Users/eirny/Work/Sample-Regex/.build/debug/SampleRegex"]
+    args: ["/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-02-08-a.xctoolchain/usr/bin/swiftc","-o","/Users/eirny/Work/Sample-Regex/.build/debug/SampleRegex","/Users/eirny/Work/Sample-Regex/.build/debug/SampleRegex.o/Sources/main.swift.o","-target","x86_64-apple-macosx10.10","-Xlinker","-all_load","-g","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","/Users/eirny/Work/Sample-Regex/.build/debug/Regex.a","-L/usr/local/lib"]
+    description: "Linking Executable:  .build/debug/SampleRegex"
