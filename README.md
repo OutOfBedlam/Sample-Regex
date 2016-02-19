@@ -3,7 +3,7 @@ Swift Regular Expression Library - Regex - Sample
 
 > Swift Package Manager based sample
 
-** Package.swift **
+**Package.swift**
 
 ```swift
 import PackageDescription
