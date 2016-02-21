@@ -1,0 +1,22 @@
+language: generic
+
+sudo: required
+dist: trusty
+
+env:
+    global:
+#        - SWIFT_BRANCH=swift-2.2-branch
+#        - SWIFT_VERSION=swift-2.2-SNAPSHOT-2016-02-08-a
+        - SWIFT_BRANCH=development
+        - SWIFT_VERSION=swift-DEVELOPMENT-SNAPSHOT-2016-02-08-a
+        - LINUX_VERSION=ubuntu14.04
+install:
+    - cd ..
+    - wget -q -O - https://swift.org/keys/all-keys.asc | gpg --import -
+    - wget https://swift.org/builds/$SWIFT_BRANCH/`echo $LINUX_VERSION|tr -d .`/$SWIFT_VERSION/$SWIFT_VERSION-$LINUX_VERSION.tar.gz
+    - tar xzf $SWIFT_VERSION-$LINUX_VERSION.tar.gz
+    - export PATH=${PWD}/$SWIFT_VERSION-$LINUX_VERSION/usr/bin:"${PATH}"
+    - cd Sample-Regex
+script:
+    - swift --version
+    - swift build -c release
