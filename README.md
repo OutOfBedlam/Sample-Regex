@@ -1,4 +1,7 @@
 # Sample-Regex
+
+[![Build Status](https://travis-ci.org/OutOfBedlam/Sample-Regex.svg?branch=master)](https://travis-ci.org/OutOfBedlam/Sample-Regex)
+
 Swift Regular Expression Library - Regex - Sample
 
 > Swift Package Manager based sample
